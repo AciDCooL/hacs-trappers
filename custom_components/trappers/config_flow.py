@@ -1,5 +1,5 @@
 import voluptuous as vol
-from homeassistant import config_entries
+from homeassistant import config_entries, core
 from .const import DOMAIN, CONF_EMAIL, CONF_PASSWORD
 
 class TrappersConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
@@ -21,6 +21,7 @@ class TrappersConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         )
 
     @staticmethod
+    @core.callback
     def async_get_options_flow(config_entry):
         return TrappersOptionsFlowHandler(config_entry)
 
