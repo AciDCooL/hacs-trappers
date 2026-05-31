@@ -30,11 +30,18 @@
     "step": {
       "init": {
         "title": "Trappers Settings",
+        "description": "Change your credentials or payout goals. When you click Submit, your credentials will be automatically tested.",
         "data": {
+          "email": "Email Address",
+          "password": "Password",
           "giftcard_cost": "Cost of a €100 Giftcard (in Trappers)",
           "payout_goal": "Trappers Goal for Progress Bar"
         }
       }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Trappers.net API",
+      "invalid_auth": "Invalid email or password"
     }
   }
 }
