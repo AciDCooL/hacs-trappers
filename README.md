@@ -1,6 +1,6 @@
 # Trappers for Home Assistant
 
-A custom component integration that connects Home Assistant to [Trappers.net](https://www.trappers.net/).
+A custom component integration that connects Home Assistant to the [Trappers API](https://api.trappers.net/) and [Trappers Shop](https://trappersshop.fiscfree.nl/#/user/login).
 
 ## Features
 - UI Configuration (No YAML required!)
