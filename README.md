@@ -24,4 +24,4 @@ A custom component integration that connects Home Assistant to [Trappers.net](ht
 5. Enjoy your fully integrated gamified cycling dashboard!
 
 ## Example Dashboard:
-![screenshot](example_dashboard.png)
+![screenshot](images/example_dashboard.png)
