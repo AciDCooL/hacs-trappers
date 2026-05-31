@@ -1,0 +1,12 @@
+{
+  "domain": "trappers",
+  "name": "Trappers",
+  "codeowners": ["@AciDCooL"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/AciDCooL/trappers-hacs",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/AciDCooL/trappers-hacs/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
