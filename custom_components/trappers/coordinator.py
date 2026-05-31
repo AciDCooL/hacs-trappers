@@ -40,6 +40,17 @@ class TrappersDataUpdateCoordinator(DataUpdateCoordinator):
                     resp.raise_for_status()
                     transactions_data = await resp.json()
 
+                # Calculate days this week
+                days_this_week = 0
+                today = datetime.datetime.now()
+                for item in events_data.get('items', []):
+                    try:
+                        dt = datetime.datetime.strptime(item['date'], '%Y-%m-%d')
+                        if dt.isocalendar()[1] == today.isocalendar()[1] and dt.year == today.year:
+                            days_this_week += 1
+                    except Exception:
+                        pass
+
                 last_reward = transactions_data['items'][0]['amount'] if transactions_data.get('items') else 0
                 last_registration = events_data['items'][0]['date'] if events_data.get('items') else "unknown"
 
@@ -48,7 +59,8 @@ class TrappersDataUpdateCoordinator(DataUpdateCoordinator):
                     "workdays": user_details.get('numberOfWorkdays', 0),
                     "total_trips": events_data.get('total', 0),
                     "last_registration": last_registration,
-                    "last_reward": last_reward
+                    "last_reward": last_reward,
+                    "days_this_week": days_this_week
                 }
         except Exception as err:
             raise UpdateFailed(f"Error communicating with API: {err}")

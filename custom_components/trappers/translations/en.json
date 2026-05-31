@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Connect to Trappers",
-        "description": "Enter your Trappers.net email and password to track your cycling data in Home Assistant.",
+        "description": "Enter your Trappers.net email and password to track your gamified cycling data in Home Assistant.",
         "data": {
           "email": "Email Address",
           "password": "Password"
