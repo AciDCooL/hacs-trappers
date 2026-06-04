@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/AciDCooL/hacs-trappers/main/brands/icon.png" alt="HACS Trappers Logo" width="150">
+</p>
+
 # Trappers for Home Assistant
 
 A custom component integration that connects Home Assistant to the [Trappers API](https://api.trappers.net/) and [Trappers Shop](https://trappersshop.fiscfree.nl/#/user/login).
