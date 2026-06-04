@@ -45,6 +45,8 @@ class TrappersDataUpdateCoordinator(DataUpdateCoordinator):
                 days_this_week = 0
                 today = datetime.datetime.now()
                 for item in events_data.get('items', []):
+                    if item.get('status') != 'PROCESSED':
+                        continue
                     try:
                         dt = datetime.datetime.strptime(item['date'], '%Y-%m-%d')
                         if dt.isocalendar()[1] == today.isocalendar()[1] and dt.year == today.year:
