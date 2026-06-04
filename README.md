@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/AciDCooL/hacs-trappers/main/brands/icon.png" alt="HACS Trappers Logo" width="150">
+  <img src="https://raw.githubusercontent.com/AciDCooL/hacs-trappers/main/custom_components/trappers/brand/icon.png" alt="HACS Trappers Logo" width="150">
 </p>
 
 # Trappers for Home Assistant
