@@ -6,6 +6,8 @@
 
 A custom component integration that connects Home Assistant to the [Trappers API](https://api.trappers.net/) and [Trappers Shop](https://trappersshop.fiscfree.nl/#/user/login).
 
+[![Hassfest Status](https://github.com/AciDCooL/hacs-trappers/actions/workflows/hassfest.yaml/badge.svg)](https://github.com/AciDCooL/hacs-trappers/actions/workflows/hassfest.yaml)
+
 ## Features
 - UI Configuration (No YAML required!)
 - Automatically creates all Trappers sensors
