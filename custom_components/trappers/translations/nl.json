@@ -1,0 +1,47 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Verbind met Trappers",
+        "description": "Vul je Trappers.net e-mailadres en wachtwoord in om Trappers met Home Assistant te verbinden.",
+        "data": {
+          "email": "E-mailadres",
+          "password": "Wachtwoord"
+        }
+      },
+      "init": {
+        "title": "Trappers Instellingen",
+        "description": "Stel je gamificatie en doelen in.",
+        "data": {
+          "giftcard_cost": "Kosten van een €100 tegoedbon (in Trappers)",
+          "payout_goal": "Trappers doel voor voortgangsbalk"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbinding mislukt",
+      "invalid_auth": "Ongeldige inloggegevens"
+    },
+    "abort": {
+      "already_configured": "De trappers integratie is al geconfigureerd"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Trappers Instellingen",
+        "description": "Verander je inloggegevens of doelen. Wanneer je op opslaan klikt worden je inloggegevens getest.",
+        "data": {
+          "email": "E-mailadres",
+          "password": "Wachtwoord",
+          "giftcard_cost": "Kosten van een €100 tegoedbon (in Trappers)",
+          "payout_goal": "Trappers doel voor voortgangsbalk"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbinding met Trappers.net API mislukt",
+      "invalid_auth": "Ongeldige inloggegevens"
+    }
+  }
+}
