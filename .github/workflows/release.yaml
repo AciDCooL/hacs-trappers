@@ -1,0 +1,26 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    name: Prepare Release Asset
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 📦 Create ZIP archive
+        run: |
+          cd custom_components/trappers
+          zip -r ../../trappers.zip .
+          cd ../../
+
+      - name: 🚀 Upload ZIP to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: trappers.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
