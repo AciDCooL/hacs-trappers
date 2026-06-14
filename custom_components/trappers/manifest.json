@@ -4,9 +4,9 @@
   "codeowners": ["@AciDCooL"],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/AciDCooL/trappers-hacs",
+  "documentation": "https://github.com/AciDCooL/hacs-trappers",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/AciDCooL/trappers-hacs/issues",
+  "issue_tracker": "https://github.com/AciDCooL/hacs-trappers/issues",
   "requirements": [],
   "version": "1.0.0"
 }
