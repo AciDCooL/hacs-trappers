@@ -1,6 +1,12 @@
 from homeassistant.components.sensor import SensorEntity, SensorStateClass
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
-from .const import DOMAIN
+from .const import (
+    DOMAIN, 
+    CONF_GIFTCARD_COST, 
+    DEFAULT_GIFTCARD_COST,
+    CONF_PAYOUT_GOAL, 
+    DEFAULT_PAYOUT_GOAL
+)
 
 async def async_setup_entry(hass, entry, async_add_entities):
     coordinator = hass.data[DOMAIN][entry.entry_id]
@@ -26,6 +32,8 @@ class TrappersSensor(CoordinatorEntity, SensorEntity):
         super().__init__(coordinator)
         self._key = key
         self._attr_name = name
+        # HARDCODED: We use "trappers_" instead of entry_id to prevent breaking existing user dashboards.
+        # This means users cannot currently install multiple Trappers accounts.
         self._attr_unique_id = f"trappers_{key}"
         self._attr_native_unit_of_measurement = unit
         self._attr_icon = icon
@@ -39,6 +47,7 @@ class TrappersEuroValueSensor(CoordinatorEntity, SensorEntity):
     def __init__(self, coordinator):
         super().__init__(coordinator)
         self._attr_name = "Trappers Euro Value"
+        # HARDCODED: Prevent breaking changes for existing users.
         self._attr_unique_id = "trappers_euro_value"
         self._attr_native_unit_of_measurement = "€"
         self._attr_icon = "mdi:currency-eur"
@@ -59,6 +68,7 @@ class TrappersEuroEarnedThisWeekSensor(CoordinatorEntity, SensorEntity):
     def __init__(self, coordinator):
         super().__init__(coordinator)
         self._attr_name = "Trappers Euro Earned This Week"
+        # HARDCODED: Prevent breaking changes for existing users.
         self._attr_unique_id = "trappers_euro_earned_this_week"
         self._attr_native_unit_of_measurement = "€"
         self._attr_icon = "mdi:piggy-bank"
@@ -78,13 +88,13 @@ class TrappersNextPayoutProgressSensor(CoordinatorEntity, SensorEntity):
     def __init__(self, coordinator):
         super().__init__(coordinator)
         self._attr_name = "Trappers Next Payout Progress"
+        # HARDCODED: Prevent breaking changes for existing users.
         self._attr_unique_id = "trappers_next_payout_progress"
         self._attr_native_unit_of_measurement = "%"
         self._attr_icon = "mdi:cash-fast"
 
     @property
     def native_value(self):
-        from .const import CONF_PAYOUT_GOAL, DEFAULT_PAYOUT_GOAL
         goal = self.coordinator.config_entry.options.get(CONF_PAYOUT_GOAL, DEFAULT_PAYOUT_GOAL)
         balance = self.coordinator.data.get("balance", 0)
         if goal == 0:
