@@ -1,8 +1,8 @@
 {
   "name": "Trappers",
-  "render_readme": true,
-  "filename": "trappers.zip",
   "zip_release": true,
-  "content_type": "integration",
-  "integration_manifest": "custom_components/trappers/manifest.json"
+  "hide_default_branch": false,
+  "homeassistant": "2024.1.0",
+  "hacs": "1.32.0",
+  "filename": "trappers.zip"
 }
