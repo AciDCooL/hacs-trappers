@@ -2,5 +2,7 @@
   "name": "Trappers",
   "render_readme": true,
   "filename": "trappers.zip",
-  "zip_release": true
+  "zip_release": true,
+  "content_type": "integration",
+  "integration_manifest": "custom_components/trappers/manifest.json"
 }
